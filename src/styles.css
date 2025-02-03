@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #eeeff3;
+  min-height: 100vh;
+  display: block;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.button {
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.4rem;
+  background: #4f46e5;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
+  background: #4338ca;
+  box-shadow: 0 0 0 3px #e0e7ff, 0 0 10px rgba(79, 70, 229, 0.6);
+}
+
+.button:disabled {
+  background: #a5b4fc;
+  color: #e0e7ff;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

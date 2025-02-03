@@ -1,0 +1,65 @@
+<form (ngSubmit)="submit()" class="form" [formGroup]="userForm">
+  <div class="wrapper-input colum2">
+    <label for="name" class="label">Name</label>
+    <input type="text" id="name" class="input" maxlength="150" formControlName="name" required>
+    <p *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="error">
+      O nome é obrigatório!
+    </p>
+
+  </div>
+
+  <div class="wrapper-input colum2">
+    <label for="email" class="label">Email</label>
+    <input type="email" id="email" class="input" maxlength="200" formControlName="email" required>
+    <p *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error">
+      O email é obrigatório e precisa ser válido!
+    </p>
+  </div>
+
+  <div class="wrapper-input colum2">
+    <label for="cpf" class="label">CPF</label>
+    <input type="text" id="cpf" class="input" maxlength="12" formControlName="cpf" (blur)="formatCpf()" required>
+    <!-- <p *ngIf="userForm.get('cpf')?.invalid && userForm.get('cpf')?.touched" class="error">
+      O cpf é obrigatório e precisa ser válido!
+    </p> -->
+  </div>
+
+  <div class="wrapper-input">
+    <label for="dataNascimento" class="label">Data de nascimento</label>
+    <input type="date" id="dataNascimento" class="input" (change)="calculateAge($event)" formControlName="dataNascimento" required>
+  </div>
+
+  <div class="wrapper-input ">
+    <label for="dataNascimento" class="label">Idade</label>
+    <input type="number" id="dataNascimento" class="input" formControlName="idade" required>
+  </div>
+
+  <h3 class="colum2">Endereço</h3>
+
+  <div class="wrapper-input">
+    <label for="cep" class="label">Cep</label>
+    <input type="text" id="cep" class="input" maxlength="8" formControlName="cep" (blur)="searchAdress()" (change)="formatCep()" required>
+  </div>
+
+  <div class="wrapper-input colum2">
+    <label for="logradouro" class="label">Logradouro</label>
+    <input type="text" id="logradouro" class="input" maxlength="150" formControlName="logradouro">
+  </div>
+
+  <div class="wrapper-input">
+    <label for="cidade" class="label">Cidade</label>
+    <input type="text" id="cidade" class="input" maxlength="150" formControlName="cidade">
+  </div>
+
+  <div class="wrapper-input">
+    <label for="estado" class="label">Estado</label>
+    <input type="text" id="estado" class="input" maxlength="2" formControlName="estado">
+  </div>
+
+  <div class="wrapper-input">
+    <label for="bairro" class="label">Bairro</label>
+    <input type="text" id="bairro" class="input" maxlength="150" formControlName="bairro">
+  </div>
+
+  <button class="button colum2" type="submit">Cadastrar</button>
+</form>
