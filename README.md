@@ -13,6 +13,6 @@ Este projeto é uma aplicação simples de cadastro de usuários, onde os dados 
 <li>Angular: Framework utilizado para a construção da SPA.</li>
 <li>eactive Forms: Utilizado para o gerenciamento dos formulários e validações de forma reativa.</li>
 <li>CSS: Estilização da aplicação para garantir uma boa experiência do usuário.</li>
-
+<hr>
 <p>Observação:</p>
 Este projeto foi desenvolvido como uma Single Page Application (SPA) e não utiliza recursos de SSR (Server-Side Rendering), já que o foco é manter a interação dinâmica do cadastro e visualização dos dados localmente no navegador.
