@@ -31,7 +31,7 @@ export class FormRegistrationComponent {
         '',
         [
           Validators.required,
-          Validators.pattern(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/),
+          Validators.pattern(/[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}/),
         ],
       ],
       dataNascimento: ['', Validators.required],
@@ -76,8 +76,6 @@ export class FormRegistrationComponent {
       {}
     );
     const adress = (await fetchAdress.json()) as Adress;
-
-    console.log(adress);
 
     if (fetchAdress.ok) {
       this.userForm.get('logradouro')?.setValue(adress.logradouro);

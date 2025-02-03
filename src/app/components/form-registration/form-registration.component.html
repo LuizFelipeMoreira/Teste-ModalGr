@@ -18,10 +18,10 @@
 
   <div class="wrapper-input colum2">
     <label for="cpf" class="label">CPF</label>
-    <input type="text" id="cpf" class="input" maxlength="12" formControlName="cpf" (blur)="formatCpf()" required>
-    <!-- <p *ngIf="userForm.get('cpf')?.invalid && userForm.get('cpf')?.touched" class="error">
+    <input type="text" id="cpf" class="input" maxlength="14" formControlName="cpf" (change)="formatCpf()" required>
+    <p *ngIf="userForm.get('cpf')?.invalid && userForm.get('cpf')?.touched" class="error">
       O cpf é obrigatório e precisa ser válido!
-    </p> -->
+    </p>
   </div>
 
   <div class="wrapper-input">
