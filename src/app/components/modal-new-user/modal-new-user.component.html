@@ -1,7 +1,7 @@
 <div *ngIf="isVisible">
 </div>
 
-<div *ngIf="isVisible" class="modal">
+<div *ngIf="isVisible" (click)="containerCloseModal($event)" class="modal">
   <div class="modal-content">
     <span class="close-btn" (click)="toggleModal()">×</span>
     <h1>Realize seu Cadastro Aqui</h1>

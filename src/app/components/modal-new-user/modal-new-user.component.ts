@@ -12,8 +12,18 @@ export class ModalNewUserComponent {
   @Input() isVisible: boolean = false;
   @Output() isVisibleChange = new EventEmitter<boolean>();
 
+  containerCloseModal(event: any) {
+    if (event.target === event.currentTarget) {
+      this.toggleModal();
+    }
+  }
+
   toggleModal() {
     this.isVisible = !this.isVisible;
     this.isVisibleChange.emit(this.isVisible);
+  }
+
+  handleFormSubmit() {
+    this.toggleModal();
   }
 }
